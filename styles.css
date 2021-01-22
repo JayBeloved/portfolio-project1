@@ -8,6 +8,7 @@ body {
 .container {
     display: grid;
     grid-template-columns: 1fr;
+    max-width: 100%;
 }
 
 /* Nav Styles */
@@ -69,7 +70,7 @@ body {
 
 .portfolio-img-background {
     height: 350px;
-    width: 100%;
+    max-width: 100%;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -89,13 +90,13 @@ body {
 }
 
 .logo-wrapper img{
-    width: 20%;
+    max-width: 20%;
     margin-bottom: 20px;
 }
 
 .img-text-wrapper .subtitle {
     transition: 1s;
-    font-weight: 600px;
+    font-weight:bold;
     color: transparent;
 }
 
@@ -126,5 +127,153 @@ body {
 
 .profile-content-wrapper h1 {
     color: lightseagreen;
+
+}
+
+/* Responsive Styles  Mobile*/
+
+@media (max-width: 500px) {
+  body{
+    font-size: 10px;
+  }
+
+  .nav-wrapper {
+    display: flex; 
+    justify-content: space-between;
+    padding: 15px;
+  }
+
+.left-side {
+    display: flex;
+    }
+
+.nav-wrapper > .left-side > div {
+    margin-right: 5px;
+    font-size: 0.9em;
+    text-transform: uppercase;
+    }
+
+.nav-link-wrapper {
+        height: 15px;
+        border-bottom: 1px solid transparent;
+        transition: border-bottom 0.5s;
+    }
+
+    .img-text-wrapper {
+        position: absolute;
+        top: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        text-align: center;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .portfolio-items-wrapper {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .portfolio-img-background {
+        height: 200px;
+        max-width: 100%;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .two-column-wrapper {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+.profile-image-wrapper img{
+        width: 100%;
+    }
+
+.profile-content-wrapper {
+        padding: 15px;
+    }
+
+.profile-content-wrapper h1 {
+    color: lightseagreen;
+    }
+
+}
+
+/* Responsive Styles  Tablet*/
+
+@media (min-width: 501px) and (max-width : 900px) {
+  body{
+    font-size: 0.9em;
+  }
+
+  .nav-wrapper {
+    display: flex; 
+    justify-content: space-between;
+    padding: 25px;
+  }
+
+.left-side {
+    display: flex;
+    }
+
+.nav-wrapper > .left-side > div {
+    margin-right: 5px;
+    font-size: 0.9em;
+    text-transform: uppercase;
+    }
+
+.nav-link-wrapper {
+        height: 15px;
+        border-bottom: 1px solid transparent;
+        transition: border-bottom 0.5s;
+    }
+
+    .img-text-wrapper {
+        position: absolute;
+        top: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        text-align: center;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    .portfolio-items-wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .portfolio-img-background {
+        height: 250px;
+        max-width: 100%;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .two-column-wrapper {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .profile-image-wrapper img{
+        width: 100%;
+    }
+
+    .profile-content-wrapper {
+        padding: 15px;
+    }
+
+    .profile-content-wrapper h1 {
+    color: lightseagreen;
+    }
 
 }
